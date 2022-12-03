@@ -1,0 +1,26 @@
+.card {
+  /* background-color: red; */
+  border-radius: 0.2rem;
+  /* border: solid 1px darkgray; */
+  margin: 1rem;
+  overflow: hidden;
+  min-width: 100px;
+  box-shadow: 3px -3px 0.2rem rgb(150, 205, 212);
+}
+
+.spriteContainer {
+  background-color: rgb(24, 24, 24);
+}
+
+.nameContainer {
+  background-color: rgb(253, 246, 144);
+  text-align: center;
+  padding: 1rem 0rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: rgb(56, 56, 56);
+}
+
+.sprite {
+  height: 100px;
+}

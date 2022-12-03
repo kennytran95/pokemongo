@@ -1,24 +1,15 @@
-const mongoose = require("mongoose");
+import { Schema, models, model } from "mongoose";
 
-const pokedexSchema = new mongoose.Schema({
+const pokedexSchema = new Schema({
   id: Number,
   name: String,
   spriteFront: String,
   spriteBack: String,
   shinySpriteFront: String,
   shinySpriteBack: String,
+  height: Number,
+  weight: Number,
   types: [String],
 });
 
-const Pokedex = mongoose.Pokdex || mongoose.model("Pokedex", pokedexSchema);
-
-const getPokemon = () => {
-  return Pokedex.find();
-};
-
-const seedPokemon = (pokemon) => {
-  return Pokedex.create(pokemon);
-};
-
-module.exports.getPokemon = getPokemon;
-module.exports.seedPokemon = seedPokemon;
+module.exports = models.Pokedex || model("Pokedex", pokedexSchema);
