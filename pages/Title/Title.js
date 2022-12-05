@@ -1,5 +1,10 @@
 import styles from "../../styles/Title.module.css";
 
 export default function Title() {
-  return <h1 className={styles.title}>Pokémon</h1>;
+  return (
+    <>
+      <img src="/PokemonHorizonBikeRide.gif" className={styles.banner} />
+      <img src="/pokemon-logo.png" className={styles.logo} />
+    </>
+  );
 }

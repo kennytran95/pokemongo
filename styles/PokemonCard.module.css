@@ -5,20 +5,24 @@
   margin: 1rem;
   overflow: hidden;
   min-width: 100px;
-  box-shadow: 3px -3px 0.2rem rgb(150, 205, 212);
+  box-shadow: 3px -3px 0.2rem rgb(19, 235, 145);
 }
 
 .spriteContainer {
-  background-color: rgb(24, 24, 24);
+  background-color: rgba(216, 216, 216, 0.25);
 }
 
 .nameContainer {
-  background-color: rgb(253, 246, 144);
+  background-color: rgb(142, 255, 148);
   text-align: center;
   padding: 1rem 0rem;
   font-size: 1.5rem;
   text-transform: capitalize;
-  color: rgb(56, 56, 56);
+  font-family: "Roboto";
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-shadow: rgb(97, 97, 97) 1px 0 25px;
+  color: rgb(0, 0, 0);
 }
 
 .sprite {
