@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import PokemonCard from "./PokemonCard";
 import styles from "../../styles/PokemonList.module.css";
+import Link from "next/link";
 
 export default function PokemonList() {
   const [pokemonList, setPokemonList] = useState([]);
@@ -19,7 +20,11 @@ export default function PokemonList() {
     <section className={styles.pokemonList}>
       {pokemonList.map((pokemonEntry) => {
         return (
-          <PokemonCard key={pokemonEntry._id} pokemonEntry={pokemonEntry} />
+          <Link
+            href={`/Pokemon/PokemonCard/pokemonentry?id=${pokemonEntry.id}`}
+          >
+            <PokemonCard key={pokemonEntry.id} pokemonEntry={pokemonEntry} />
+          </Link>
         );
       })}
     </section>

@@ -8,7 +8,7 @@ export default async function pokedex(req, res) {
     res.send("Successfully posted to mongodb database");
   } else if (req.method === "GET") {
     await connectMongo();
-    const pokemon = await Pokedex.find();
+    const pokemon = await Pokedex.find({}).sort({ id: 1 });
     res.json(pokemon);
   } else {
     res.status(400).send("Invalid request.");

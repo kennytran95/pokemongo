@@ -1,0 +1,110 @@
+.card {
+  /* background-color: red; */
+  border-radius: 0.2rem;
+  /* border: solid 1px darkgray; */
+  margin: 1rem;
+  overflow: hidden;
+  min-width: 100px;
+  max-width: 240px;
+  box-shadow: 3px -3px 0.2rem rgb(92, 255, 255);
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+}
+
+.spriteContainer {
+  background-color: rgba(216, 216, 216, 0.25);
+}
+
+.nameContainer {
+  background-color: rgb(87, 87, 87);
+  text-align: center;
+  padding: 1rem 0rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-family: "Roboto";
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-shadow: rgb(97, 97, 97) 1px 0 25px;
+  color: rgb(0, 0, 0);
+}
+
+.sprite {
+  height: 100px;
+}
+
+.individualPokemonPage {
+  height: 95vh;
+  width: 80vw;
+  /* border: solid 5px red;
+  background-color: aquamarine; */
+}
+
+.return {
+  padding: 1rem;
+  background-color: aquamarine;
+  border-radius: 5px;
+  border: none;
+  margin: 1rem;
+  font-size: 18px;
+  transition: all 100ms ease-in-out;
+}
+
+.return:hover {
+  padding: 1rem;
+  background-color: rgb(127, 255, 212, 0.8);
+  border-radius: 5px;
+  border: none;
+  margin: 1rem;
+  font-size: 18px;
+  transition: all 200ms ease-in-out;
+}
+
+.undoIcon {
+  margin-right: 1rem;
+}
+
+.typeTable {
+  border: solid 1px rgb(0, 255, 106);
+  border-radius: 5px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.header {
+  font-weight: bold;
+  font-size: 2rem;
+  /* background-color: red; */
+  /* border: solid 1px blue; */
+}
+
+.attribute {
+  background-color: greenyellow;
+  border-radius: 10px;
+  padding: 0.1rem;
+  /* margin: 1rem; */
+  font-weight: bold;
+  text-align: center;
+}
+
+.value {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.bmi {
+  margin: 0.5rem;
+  padding: 1rem;
+  list-style: none;
+}
+
+.bmiHW {
+  background-color: transparent;
+  border: solid aquamarine 2px;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
