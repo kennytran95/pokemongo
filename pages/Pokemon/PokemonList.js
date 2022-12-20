@@ -14,6 +14,7 @@ export default function PokemonList() {
   }, []);
 
   async function getPokemon() {
+    console.log("CALLED ASYNC GET POKEMON!");
     toggleLoading(true);
     let result = await axios.get("/api/pokedex");
     let kanto = result.data.slice(0, 151);
@@ -22,7 +23,7 @@ export default function PokemonList() {
   }
 
   async function filterList(type) {
-    console.log(type);
+    console.log("CALLED FILTER LIST");
     if (type === "Show All") {
       getPokemon();
     } else {
