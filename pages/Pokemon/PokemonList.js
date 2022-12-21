@@ -15,15 +15,15 @@ export default function PokemonList() {
     console.log("CALLED ASYNC GET POKEMON!");
     toggleLoading(true);
     let result = await axios.get("/api/pokedex");
-    let kanto = result.data.slice(0, 151);
+    let kanto = result.data.slice(0, 386);
     setPokemonList(kanto);
     setFilteredPokemonList(kanto);
     toggleLoading(false);
   }
 
   useEffect(() => {
-    getPokemon();
     console.log("U S E ___ E F F E C T");
+    getPokemon();
   }, []);
 
   function filterList(type) {

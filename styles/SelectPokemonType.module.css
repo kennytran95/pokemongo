@@ -7,8 +7,16 @@
 
 .selCont {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   margin: 1rem;
+}
+
+.tagContainer {
+  /* border: solid 5px blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .opt {

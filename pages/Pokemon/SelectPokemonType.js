@@ -1,8 +1,13 @@
 import styles from "../../styles/SelectPokemonType.module.css";
+import Portfolio from "../shared/Portfolio";
 
 function SelectPokemonType({ filterList }) {
   return (
     <div className={styles.selCont}>
+      <div className={styles.tagContainer}>
+        <Portfolio background="/Paint.png" avatar="/Ken.png" />
+        <span style={{ margin: "0.5rem" }}>Made by Kenny Tran</span>
+      </div>
       <div>
         <label htmlFor="type" className={styles.label}>
           Filter By Type
