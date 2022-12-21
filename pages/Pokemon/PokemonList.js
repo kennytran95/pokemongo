@@ -4,14 +4,12 @@ import PokemonCard from "./PokemonCard";
 import styles from "../../styles/PokemonList.module.css";
 import Link from "next/link";
 import SelectPokemonType from "./SelectPokemonType";
+import HashLoader from "react-spinners/HashLoader";
 
 export default function PokemonList() {
   const [pokemonList, setPokemonList] = useState([]);
+  const [filteredPokemonList, setFilteredPokemonList] = useState([]);
   const [loading, toggleLoading] = useState(false);
-
-  useEffect(() => {
-    getPokemon();
-  }, []);
 
   async function getPokemon() {
     console.log("CALLED ASYNC GET POKEMON!");
@@ -19,30 +17,40 @@ export default function PokemonList() {
     let result = await axios.get("/api/pokedex");
     let kanto = result.data.slice(0, 151);
     setPokemonList(kanto);
+    setFilteredPokemonList(kanto);
     toggleLoading(false);
   }
 
-  async function filterList(type) {
-    console.log("CALLED FILTER LIST");
+  useEffect(() => {
+    getPokemon();
+    console.log("U S E ___ E F F E C T");
+  }, []);
+
+  function filterList(type) {
     if (type === "Show All") {
-      getPokemon();
+      setFilteredPokemonList(pokemonList);
     } else {
       toggleLoading(true);
-      let result = await axios.get("/api/pokedex");
-      let kanto = result.data.slice(0, 151);
-      const filteredPokemon = kanto.filter((pokemon) =>
+      const filteredPokemon = pokemonList.filter((pokemon) =>
         pokemon.types.includes(type.toLowerCase())
       );
       toggleLoading(false);
-      setPokemonList(filteredPokemon);
+      setFilteredPokemonList(filteredPokemon);
     }
   }
 
   if (loading) {
     return (
-      <>
-        <h1>Loading...</h1>
-      </>
+      <section className={styles.loadContainer}>
+        <HashLoader
+          color="aquamarine"
+          loading={loading}
+          cssOverride={{}}
+          size={50}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </section>
     );
   }
 
@@ -50,7 +58,7 @@ export default function PokemonList() {
     <>
       <SelectPokemonType filterList={filterList} />
       <section className={styles.pokemonList}>
-        {pokemonList.map((pokemonEntry) => {
+        {filteredPokemonList.map((pokemonEntry) => {
           return (
             <Link
               href={`/Pokemon/PokemonCard/pokemonentry?id=${pokemonEntry.id}`}

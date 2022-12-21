@@ -13,7 +13,7 @@ function SelectPokemonType({ filterList }) {
           id="type"
           onChange={(e) => filterList(e.target.value)}
         >
-          <option className={styles.opt} selected disabled hidden>
+          <option className={styles.opt} value="Sort by Type" hidden>
             Sort by Type
           </option>
           <option className={styles.opt}>Show All</option>
