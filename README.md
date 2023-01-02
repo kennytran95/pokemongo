@@ -19,3 +19,4 @@ Run the following command in the CLI: ```npm run dev```
 <br>
 ![Mongodb](https://img.shields.io/badge/-MongoDB-white?style=for-the-badge&labelColor=black&logo=mongodb&logoColor=white)
 <br>
+![Docker](https://img.shields.io/badge/-Docker-white?style=for-the-badge&labelColor=black&logo=docker&logoColor=white)
