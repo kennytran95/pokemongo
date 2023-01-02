@@ -20,3 +20,5 @@ Run the following command in the CLI: ```npm run dev```
 ![Mongodb](https://img.shields.io/badge/-MongoDB-white?style=for-the-badge&labelColor=black&logo=mongodb&logoColor=white)
 <br>
 ![Docker](https://img.shields.io/badge/-Docker-blue?style=for-the-badge&labelColor=black&logo=docker&logoColor=blue)
+<br>
+![GraphQL](https://img.shields.io/badge/-GraphQL-pink?style=for-the-badge&labelColor=black&logo=graphql&logoColor=pink)
