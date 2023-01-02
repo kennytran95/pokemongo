@@ -1,6 +1,6 @@
 First, run the development server:
 
-```npm run dev```
+Run the following command in the CLI: ```npm run dev```
 
 ## 👩🏻‍💻Technologies
 
