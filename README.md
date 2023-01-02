@@ -2,6 +2,10 @@ First, run the development server:
 
 Run the following command in the CLI: ```npm run dev```
 
+Backend Repo:
+
+## https://github.com/kennytran95/pokexpress
+
 ## 👩🏻‍💻Technologies
 
 ## Frontend
