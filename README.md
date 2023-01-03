@@ -2,6 +2,8 @@ First, run the development server:
 
 Run the following command in the CLI: ```npm run dev```
 
+![site demo](./public/pokemongo.gif)
+
 ### Backend Repo: https://github.com/kennytran95/pokexpress
 
 ## 👩🏻‍💻Technologies
