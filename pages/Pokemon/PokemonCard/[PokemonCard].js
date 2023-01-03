@@ -51,23 +51,26 @@ export default function PokemonCard() {
             <p>{pokemonEntry.name}</p>
           </div>
         </div>
-        <table className={styles.typeTable}>
+        {/* <table className={styles.typeTable}>
           <thead className={styles.header}>
             <tr>
-              <th>Type</th>
-              <th>Value</th>
+              <th>Pokemon Types</th>
             </tr>
           </thead>
           <tbody>
             {pokemonEntry.types.map((type) => (
               <tr key={type}>
-                <td className={styles.attribute}>Type</td>
                 <td className={styles.value}>{type}</td>
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
         <ul className={styles.bmi}>
+          {pokemonEntry.types.map((type) => (
+            <li key={type} className={styles.bmiHW}>
+              Type: {type}
+            </li>
+          ))}
           <li className={styles.bmiHW}>Height: {pokemonEntry.height}</li>
           <li className={styles.bmiHW}>Weight: {pokemonEntry.weight}</li>
         </ul>

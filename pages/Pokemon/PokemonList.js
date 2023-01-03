@@ -22,7 +22,6 @@ export default function PokemonList() {
   }
 
   useEffect(() => {
-    console.log("U S E ___ E F F E C T");
     getPokemon();
   }, []);
 
